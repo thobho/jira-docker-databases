@@ -9,7 +9,9 @@ RUN apt-get update && apt-get install wget -y && apt install default-jre -y && a
 #install jira
 && java -jar jira-installer/target/jira-installer-1.0-SNAPSHOT-jar-with-dependencies.jar ./${JIRA_NAME} /jira /jira_home \
 #mysql connector
-&& wget -P /opt/atlassian/jira/lib https://repo1.maven.org/maven2/mysql/mysql-connector-java/5.1.47/mysql-connector-java-5.1.47.jar
+&& wget -P /opt/atlassian/jira/lib https://repo1.maven.org/maven2/mysql/mysql-connector-java/5.1.47/mysql-connector-java-5.1.47.jar \
+#oracle driver
+wget -P /opt/atlassian/jira/lib http://download.oracle.com/otn/utilities_drivers/jdbc/122010/ojdbc8.jar
 WORKDIR /opt/atlassian/jira/bin
 ENTRYPOINT [ "./start-jira.sh", "-fg" ]
 EXPOSE 8080
