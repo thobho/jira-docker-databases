@@ -1,0 +1,16 @@
+version: '3.3'
+services:
+  db:
+    image: tomaszbar/jira-mysql-empty-db
+    ports:
+      - '3306:3306'
+    expose: 
+      - '3306'
+  jira:
+    depends_on:
+     - db
+    image: tomaszbar/jira-installer
+    ports: 
+      - '8080:8080'
+    expose: 
+      - '8080'

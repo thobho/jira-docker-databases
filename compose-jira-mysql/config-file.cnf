@@ -1,0 +1,18 @@
+/etc/mysql/my.cnf for mysql 5.7
+[mysqld]
+default-storage-engine=INNODB
+character_set_server=utf8mb4
+innodb_default_row_format=DYNAMIC
+innodb_large_prefix=ON
+innodb_file_format=Barracuda
+innodb_log_file_size=2G
+sql_mode=NO_AUTO_VALUE_ON_ZERO
+
+
+/etc/mysql/my.cnf for mysql 5.6
+[mysqld]
+default-storage-engine=INNODB
+max_allowed_packet=256M
+innodb_log_file_size=256M
+lower_case_table_names=1
+

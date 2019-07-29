@@ -1,0 +1,1 @@
+Oracle Oracle Standard Edition 12c Release 2 prepared to install Jira according to this instructions: 
