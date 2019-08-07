@@ -6,9 +6,10 @@ services:
     build:
       context: ../jira-autorun
       args: 
-        JIRA_NAME: "atlassian-jira-software-7.9.0-x64.bin"
+        JIRA_NAME: "atlassian-jira-software-8.0.0-x64.bin"
     ports: 
       - '8080:8080'
+      - '5005:5005'
     expose: 
       - '8080'
   db:

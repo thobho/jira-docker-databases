@@ -6,15 +6,17 @@ services:
     build:
       context: ../jira-autorun
       args: 
-        JIRA_NAME: "atlassian-jira-software-8.0.0-x64.bin"
+        JIRA_NAME: "atlassian-jira-software-8.3.0-x64.bin"
     ports: 
       - '8080:8080'
       - '5006:5006'
     expose: 
       - '8080'
   db:
-    image: tomaszbar/jira-mssql-empty-db
+    image: tomaszbar/jira-oracle-empty-db:latest
     ports: 
-      - '1433:1433'
+      - '1521:1521'
+      - '5500:5500'
     expose:
-      - '1433'
+      - '1521' 
+      - '5500'

@@ -12,9 +12,3 @@ services:
       - '5006:5006'
     expose: 
       - '8080'
-  db:
-    image: tomaszbar/jira-mssql-empty-db
-    ports: 
-      - '1433:1433'
-    expose:
-      - '1433'

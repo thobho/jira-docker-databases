@@ -37,7 +37,6 @@ JVM_REQUIRED_ARGS='-Djava.awt.headless=true -Datlassian.standalone=JIRA -Dorg.ap
 #
 #-----------------------------------------------------------------------------------
 
-touch test
 
 #-----------------------------------------------------------------------------------
 # Prevents the JVM from suppressing stack traces if a given type of exception
@@ -66,7 +65,7 @@ JAVA_OPTS="-Xms${JVM_MINIMUM_MEMORY} -Xmx${JVM_MAXIMUM_MEMORY} ${JVM_CODE_CACHE_
 export JAVA_OPTS
 
 # DO NOT remove the following line
-JAVA_HOME="/home/tbar/all-jiras/jira-8.1.0/jre/"; export JAVA_HOME
+JAVA_HOME="/opt/atlassian/jira/jre/"; export JAVA_HOME
 
 echo ""
 echo "If you encounter issues starting or stopping JIRA, please see the Troubleshooting guide at https://docs.atlassian.com/jira/jadm-docs-081/Troubleshooting+installation"
