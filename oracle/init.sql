@@ -1,5 +1,4 @@
 alter session set "_ORACLE_SCRIPT"=true;
-drop user jiradb cascade ;
 create user jiradb identified by samolot123 default tablespace "USERS" quota unlimited on "USERS";
 
 grant connect to jiradb;
